@@ -10,58 +10,12 @@
 
 body {
   font-family: var(--ct-body-font-family) !important;
-  background-color: var(--color-background) !important;
+  background-color: white;
 }
 
 :root {
   --ct-body-font-family: Nunito,sans-serif;
-  --ct-box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
-  --color-background:#f6f7fa;
-  --color-blue-primary: #097EF6;
-  --color-blue-primary-hover: #0873dd;
-  --color-grey-text: #6C7781;
-  --color-white: white;
-  --color-google: #F44336;
-  --color-google-degraded: #df372b;
-  --color-google-border: #d43328;
-  --color-facebook: #3B5998;
-  --color-facebook-degraded: #27427d;
-  --color-facebook-border: #193673;
-  --color-twitter: #55ACEE;
-  --color-twitter-degraded: #4399db;
-  --color-twitter-border: #3a8dcb;
-  --color-brackground-button-p: #FAFBFD;
-  --color-brackground-button-p-border: #F1F3FA;
-  --color-grey-text-navbar: #98a6ad;
-  --color-icon-menu-nav: #313a46;
-  --color-blue-background-brand-sidebar: #1574D6;
-  --color-blue-bg-profile-sidebar: #2D8CEF;
-  --color-line-bg: #6CB2FB;
-  --color-blue-active-option: #4DA5FF;
-  --ct-dropdown-link-hover-color: #2c343f;
-  --ct-dropdown-link-hover-bg: #f4f6fb;
-  --ct-dropdown-link-color: #6c757d;
-  --color-section-deparment: #6C7581;
-  --color-star: #FFBC00;
-  --color-more: #007185;
-  --color-border-card: #DEE2E6;
-  --color-title-card-product: #0F1111;
-  --color-category-card-product: #565959;
-  --color-arrow: #979797;
-  --color-badge-gb-green: #D3F6EC;
-  --color-badge-text-green: #0ACF97;
-  --color-button-bg-add-to-cart: #FA5C7C;
-  --color-button-border-add-to-cart: #f14b6c;
-  --color-button-bg-hover-add-to-cart: #ee4567;
-  --bs-table-accent-bg: #f5f6f9;
-  --color-bar-green: #0ACF97;
-  --color-border-green: #0cb887;
-  --color-hover-green: #11b788;
-  --color-bar-yellow: #FFBC00;
-  --border-color-order-summary: #EEF2F7;
-  --color-grey-text-two: #ADB8C4;
-  --color-placeholder-input: #9aa3ab;
-  --color-payment: #788388;
+  --ct-box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.4);
 }
 
 .swal2-styled.swal2-confirm {

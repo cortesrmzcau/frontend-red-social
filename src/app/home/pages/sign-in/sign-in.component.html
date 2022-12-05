@@ -1,62 +1,42 @@
-<main>
-  <div class="form">
-    <div>
-      <div class="row">
-        <div class="col-lg-12">
-          <p class="title">Sign in</p>
+<div class="body-p">
+  <main>
+    <div class="back-form d-flex align-items-center">
+      <div class="form">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="title">Sign in</p>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <p class="text">Welcome to Ecommerce Bara Bara, you can find various products at affordable prices for your home, office or car</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <form>
-            <div class="mb-3">
-              <label for="nameFormControl" class="form-label">Name</label>
-              <input type="text" class="form-control" id="nameFormControl" placeholder="Enter your name" required>
-            </div>
-            <div class="mb-3">
-              <label for="emailFormControl" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="emailFormControl" placeholder="Enter your email" required>
-            </div>
-            <div class="mb-3">
-              <label for="passwordFormControl" class="form-label">Password</label>
-              <input type="password" class="form-control" id="passwordFormControl" placeholder="Enter your password" required>
-            </div>
-            <div class="mb-3">
-              <label for="password2FormControl" class="form-label">Confirm Password</label>
-              <input type="password" class="form-control" id="password2FormControl" placeholder="Enter your password" required>
-            </div>
-            <div class="mb-3">
-              <button type="submit" class="btn btn-primary button-p">Sign up</button>
-            </div>
-            <p>Do you already have an account? <a routerLink="/login" class="text-redirect">Log in</a></p>
-            <div class="social">
-              <button type="button" class="btn btn-primary google">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-google"></i>
-                  <p>Login with Google</p>
-                </div>
-              </button>
-              <button type="button" class="btn btn-primary facebook">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-facebook"></i>
-                  <p>Login with Facebook</p>
-                </div>
-              </button>
-              <button type="button" class="btn btn-primary twitter">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-twitter"></i>
-                  <p>Login with Twitter</p>
-                </div>
-              </button>
-            </div>
-          </form>
+        <div class="row">
+          <div class="col-lg-12">
+            <form [formGroup]="formSignin" autocomplete="off">
+              <div class="mb-3">
+                <label for="usuarioFormControl" class="form-label">Usuario</label>
+                <input type="text"
+                  class="form-control"
+                  id="usuarioFormControl"
+                  placeholder="Ingresa tu nombre"
+                  formControlName="usuario">
+              </div>
+              <div class="mb-3">
+                <label for="passwordFormControl" class="form-label">Password</label>
+                <input type="password"
+                  class="form-control"
+                  id="passwordFormControl"
+                  placeholder="Ingresa tu password"
+                  formControlName="password">
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary button-p"
+                  (click)="signup()">Sign up</button>
+              </div>
+              <p>Si ya tienes una cuenta,
+                <a routerLink="/login" class="text-redirect">Inicia Sesión</a>
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>  
+</div>

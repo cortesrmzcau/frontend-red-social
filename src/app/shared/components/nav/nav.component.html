@@ -1,26 +1,34 @@
-<nav class="navbar fixed-top navbar-expand-lg" [ngClass]="collapsed ? 'nav-collapsed' : ''">
+<nav class="navbar fixed-top navbar-expand-lg">
   <div class="container-fluid">
     <div class="collapse navbar-collapse">
+      <a class="title-red-social">Red Social</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item" (click)="toggleHidden()">
-          <i class="bi bi-list"></i>
-        </li>
         <li class="nav-item">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          </form>
+          <button type="button" class="btn btn-light"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">Buscar</button>
         </li>
       </ul>
-
       <ul class="d-flex align-items-center navbar-nav-two">
         <li>
-          <div class="position-relative" routerLink="/shopping-cart">
-            <i class="bi bi-cart-fill"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              1
-            </span>
+          <div class="d-flex button-profile">
+            <div class="position-relative">
+              <i class="bi bi-bell-fill"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                1
+              </span>
+            </div>
           </div>
+          <ul class="list-options">
+            <li class="d-flex align-items-center">
+              <p>Cesar Augusto</p>
+              <div class="d-flex">
+                <button type="button" class="btn btn-primary">Aceptar</button>
+                <button type="button" class="btn btn-primary">Rechazar</button>
+              </div>
+            </li>
+          </ul>
         </li>
+
         <li>
           <div class="d-flex button-profile">
             <div class="d-flex align-items-center">
@@ -31,41 +39,59 @@
             <div class="name-type">
               <div>
                 <p>César Cortés</p>
-                <p>Custom</p>
               </div>
             </div>
           </div>
           <ul class="list-options">
-            <li class="d-flex align-items-center">
-              <i class="bi bi-person-circle"></i>
-              <p>Profile</p>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class="bi bi-gear-fill"></i>
-              <p>Profile</p>
-            </li>
-            <li class="d-flex align-items-center">
+            <li class="d-flex align-items-center" (click)="logOut()">
               <i class="bi bi-box-arrow-right"></i>
-              <p>Log out</p>
+              <a>Salir</a>
             </li>
           </ul>
         </li>
       </ul>
     </div>
-    <div class="sub-nav" [ngClass]="filter ? 'd-block': ''">
-      <div class="d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center img-switch">
-          <img src="https://m.media-amazon.com/images/G/01/prime/marketing/slashPrime/amazon-prime-delivery-checkmark._CB659998231_.png"
-            alt="" height="25px">
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-          </div>
-        </div>
-        <div class="d-flex align-items-center filters">
-          <p>Filters</p>
-          <i class="bi bi-caret-down-fill"></i>
-        </div>
+  </div>
+</nav>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Buscar amigo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input class="form-control me-2" type="search"
+            placeholder="Buscar" aria-label="Search">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cesar Cortes</td>
+              <td>
+                <div class="d-flex justify-content-end">
+                  <button type="button" class="btn btn-primary">Agregar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Cesar Cortes</td>
+              <td>
+                <div class="d-flex justify-content-end">
+                  <button type="button" class="btn btn-primary">Agregar</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-</nav>
+</div>

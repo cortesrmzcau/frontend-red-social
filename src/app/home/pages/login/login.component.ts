@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +11,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   formLogin = new FormGroup({
-    userEmail: new FormControl('', Validators.email),
-    userPassword: new FormControl('', Validators.minLength(6))
+    usuario: new FormControl('', Validators.email),
+    password: new FormControl('', Validators.minLength(6))
   });
 
   constructor(
@@ -22,6 +23,14 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this._router.navigate(['/home']);
+    console.log(this.formLogin.value)
+    if(this.formLogin.value.usuario != "") {
+      this._router.navigate(['/home']);
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Usuario o password incorrectos'
+      });
+    }
   }
 }

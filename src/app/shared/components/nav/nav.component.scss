@@ -1,13 +1,19 @@
 nav {
-  width: calc(100% - 260px);
+  width: 100%;
   height: 70px;
-  padding: 0;
-  background-color: var(--color-white);
+  padding: 0 0 0 30px;
+  background-color: #0F66DB;
   box-shadow: var(--ct-box-shadow);
   left: auto;
   transition: all .5s ease;
   .container-fluid {
     padding: 0;
+    a.title-red-social {
+      color: white;
+      padding-right: 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
     ul.navbar-nav {
       li {
         i {
@@ -20,7 +26,7 @@ nav {
       li {
         form {
           input {
-            background-color: var(--color-background);
+            background-color: white;
           }
           .form-control,
           &:focus {
@@ -35,17 +41,54 @@ nav {
       padding-left: 0;
       margin: 0;
       li:nth-child(1) {
-        padding-right: 20px;
-        div  {
-          i {
-            font-size: 22px;
-            color: var(--color-blue-primary);
-            background-color: var(--color-white);
-            cursor: pointer;
+        &:hover > ul.list-options {
+          display: block;
+        }
+        div.d-flex.button-profile {
+          padding-right: 20px;
+          div  {
+            i {
+              font-size: 22px;
+              color: white;
+              cursor: pointer;
+            }
+            span.badge {
+              padding: 3px 5px;
+              cursor: pointer;
+            }
           }
-          span.badge {
-            padding: 3px 5px;
-            cursor: pointer;
+        }
+        ul.list-options {
+          display: none;
+          position: absolute;
+          top: 50px;
+          right: 0px;
+          height: 60px;
+          background-color: white;
+          box-shadow: var(--ct-box-shadow);
+          transition: all .5s ease;
+          cursor: default;
+          list-style: none;
+          padding-left: 0;
+          border-radius: 3px;
+          li {
+            display: block;
+            height: 60px;
+            padding-left: 20px;
+            &:hover {
+              cursor: default;
+              background-color: var(--ct-dropdown-link-hover-bg);
+            }
+            p {
+              font-size: 16px;
+              font-weight: 600;
+              margin-right: 20px;
+              margin-bottom: 0;
+            }
+            button {
+              margin-right: 10px;
+              background-color: #0F66DB;
+            }
           }
         }
       }
@@ -57,24 +100,20 @@ nav {
           display: flex;
           width: 180px;
           height: 70px;
-          background-color: var(--color-brackground-button-p);
-          border: var(--color-brackground-button-p-border) 1px solid;
+          background-color: #0F66DB;
           padding: 0px 15px;
           cursor: pointer;
           div.d-flex.align-items-center {
             .background-circle {
-              background: var(--color-white);
               width: 32px;
               height: 32px;
               border-radius: 50%;
-              border: var(--color-brackground-button-p-border) 1px solid;
               display: flex;
               align-items: center;
               justify-content: center;
               i {
                   font-size: 22px;
-                  color: var(--color-blue-primary);
-                  background-color: var(--color-white);
+                  color: white;
                 }
             }
           }
@@ -86,7 +125,7 @@ nav {
               &:nth-child(odd) {
                 font-size: 16px;
                 font-weight: 600;
-                color: var(--color-grey-text-navbar);
+                color: white;
                 margin-bottom: 0;
               }
               &:nth-child(even) {
@@ -101,16 +140,17 @@ nav {
         ul.list-options {
           display: none;
           position: absolute;
-          top: 70px;
+          top: 50px;
           right: 5px;
           width: 170px;
-          height: 120px;
-          background-color: var(--color-white);
+          height: 40px;
+          background-color: white;
           box-shadow: var(--ct-box-shadow);
           transition: all .5s ease;
           cursor: default;
           list-style: none;
           padding-left: 0;
+          border-radius: 3px;
           li {
             display: block;
             height: 40px;
@@ -133,9 +173,6 @@ nav {
       }
     }
     @media (max-width: 991px) {
-      nav {
-        background-color: red !important;
-      }
       .navbar-nav {
         flex-direction: inherit;
       }
@@ -147,39 +184,13 @@ nav {
       }
     }
   }
-  .sub-nav {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    background-color: var(--color-brackground-button-p);
-    top: 70px;
-    padding: 6px 10px;
-    transition: all .5s ease;
-    box-shadow: var(--ct-box-shadow);
-    div {
-      .img-switch {
-        img {
-          padding-right: 10px;
-        }
-        .form-check {
-          margin-bottom: 0;
-        }
-      }
-      .filters {
-        p {
-          color: var(--color-grey-text);
-          padding-right: 10px;
-          margin-bottom: 0;
-        }
-        i {
-          font-size: 14px;
-          color: var(--color-more);
-        }
+}
+.modal {
+  table {
+    tbody {
+      tr {
+        border-style: hidden;
       }
     }
   }
-}
-.nav-collapsed {
-  width: 100%;
 }

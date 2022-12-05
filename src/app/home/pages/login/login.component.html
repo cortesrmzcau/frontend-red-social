@@ -1,62 +1,42 @@
-<main>
-  <div class="form">
-    <div>
-      <div class="row">
-        <div class="col-12">
-          <p class="title">Login</p>
+<div class="body-p">
+  <main>
+    <div class="back-form d-flex align-items-center">
+      <div class="form">
+        <div class="row">
+          <div class="col-12">
+            <p class="title">Login</p>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <p class="text">Welcome to Ecommerce Bara Bara, you can find various products at affordable prices for your home, office or car</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <form [formGroup]="formLogin">
-            <div class="mb-3">
-              <label for="emailFormControl" class="form-label">Email address</label>
-              <input type="email" class="form-control"
-                id="emailFormControl"
-                placeholder="Enter your email"
-                formControlName="userEmail"
-                required>
-            </div>
-            <div class="mb-3">
-              <label for="passwordFormControl" class="form-label">Password</label>
-              <input type="password" class="form-control"
-                id="passwordFormControl"
-                placeholder="Enter your password"
-                formControlName="userPassword"
-                required>
-            </div>
-            <div class="mb-3">
-              <button type="button" class="btn btn-primary button-p" (click)="login()">Login</button>
-            </div>
-            <p class="text-12">You still do not have an account? <a routerLink="/sig-in" class="text-redirect">Sign up</a></p>
-            <div class="social">
-              <button type="button" class="btn btn-primary google">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-google"></i>
-                  <p>Login with Google</p>
-                </div>
-              </button>
-              <button type="button" class="btn btn-primary facebook">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-facebook"></i>
-                  <p>Login with Facebook</p>
-                </div>
-              </button>
-              <button type="button" class="btn btn-primary twitter">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-twitter"></i>
-                  <p>Login with Twitter</p>
-                </div>
-              </button>
-            </div>
-          </form>
+        <div class="row">
+          <div class="col-lg-12">
+            <form [formGroup]="formLogin" autocomplete="off">
+              <div class="mb-3">
+                <label for="usuarioFormControl" class="form-label">Usuario</label>
+                <input type="usuario"
+                  class="form-control"
+                  id="usuarioFormControl"
+                  placeholder="Ingresa tu usuario"
+                  formControlName="usuario">
+              </div>
+              <div class="mb-3">
+                <label for="passwordFormControl" class="form-label">Password</label>
+                <input type="password"
+                  class="form-control"
+                  id="passwordFormControl"
+                  placeholder="Ingresa tu password"
+                  formControlName="password">
+              </div>
+              <div class="mb-3">
+                <button type="button" class="btn btn-primary button-p"
+                  (click)="login()">Login</button>
+              </div>
+              <p class="text-12">Sí aún no tienes cuenta
+                <a routerLink="/sig-in" class="text-redirect">Registrate</a>
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
+</div>
