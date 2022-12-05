@@ -1,10 +1,62 @@
 <app-nav></app-nav>
-<div class="container text-center mt-5 pt-5">
-    <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6" style="background-color: green;">
-          Column
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-12">
+          <div class="card-view mb-4 mt-3">
+            <form>
+              <div class="form-floating mb-3">
+                <textarea class="form-control"
+                  style="height: 90px"></textarea>
+                <label>En que estas pensando</label>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-primary">Publicar</button>  
+              </div>
+            </form>
+          </div>
+          <div class="line"></div>
         </div>
-        <div class="col-3"></div>
+        <div class="col-12">
+          <div class="card-view mb-4 mt-3">
+            <div class="publicaciones">
+              <p class="mb-1">Cesar Cortes</p>
+              <p class="mb-0">Buenos días compañeros</p>
+            </div>
+            <div class="reacciones mt-4">
+              <div class="d-flex justify-content-end align-items-center">
+                <button type="button" class="btn-link position-relative">
+                  <img height="30px" src="../../../../assets/me_gusta.png" alt="">
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                    1
+                  </span>
+                </button>
+                <button type="button" class="btn-link position-relative">
+                  <img height="30px" src="../../../../assets/me_encanta.png" alt="">
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                    10
+                  </span>
+                </button>
+                <button type="button" class="btn-link position-relative">
+                  <img height="30px" src="../../../../assets/me_divierte.png" alt="">
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                    1
+                  </span>
+                </button>
+                <button type="button" class="btn-link position-relative">
+                  <img height="30px" src="../../../../assets/me_enoja.png" alt="">
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                    1
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="col-3"></div>
+  </div>
 </div>
