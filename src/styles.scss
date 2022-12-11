@@ -19,8 +19,8 @@ body {
 }
 
 .swal2-styled.swal2-confirm {
-  background-color: var(--color-blue-primary) !important;
+  background-color: #085ecf !important;
   &:focus {
-    box-shadow: 0 0 0 3px rgb(9 126 246 / 50%) !important;
+    box-shadow: 0 0 0 3px rgb(95 157 239) !important;
   }
 }
